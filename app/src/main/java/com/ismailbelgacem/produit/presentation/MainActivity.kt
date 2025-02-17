@@ -1,11 +1,11 @@
-package com.ismailbelgacem.produit
+package com.ismailbelgacem.produit.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentTransaction
+import com.ismailbelgacem.produit.R
 import com.ismailbelgacem.produit.presentation.home.HomeFragment
-import com.ismailbelgacem.produit.presentation.home.viewModel.ViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
