@@ -41,7 +41,7 @@ class AdapterProduit(val clickProduit: (Produit) -> Unit, val changeCb: (Produit
                 binding.cbProdact.paintFlags =
                     binding.cbProdact.paintFlags and android.graphics.Paint.STRIKE_THRU_TEXT_FLAG.inv()
             }
-            binding.cbProdact.text = myItem.name
+            binding.cbProdact.text = "${myItem.aisleNumber} ${myItem.name}"
             binding.cbProdact.setOnCheckedChangeListener { _, isChecked ->
               //  myItem.isSelected = isChecked
                 if (isChecked) {

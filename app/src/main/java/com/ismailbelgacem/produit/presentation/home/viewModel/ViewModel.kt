@@ -47,5 +47,18 @@ class ViewModel @Inject constructor() : ViewModel() {
             list[index].isSelected = !item.isSelected
     }
 
+    fun sortByAlphab() {
+        list.sortBy { it.name }
+        viewModelScope.launch {
+            _produitAdd.send(list)
+        }
+    }
+    fun sortByAsian() {
+        list.sortBy { it.aisleNumber }
+        viewModelScope.launch {
+            _produitAdd.send(list)
+        }
+    }
+
 
 }

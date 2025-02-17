@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.ismailbelgacem.produit.R
+import com.ismailbelgacem.produit.core.getAisleForProduct
 import com.ismailbelgacem.produit.data.model.Produit
 import com.ismailbelgacem.produit.databinding.BottomBarAddUpdateBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -53,10 +54,10 @@ class CurdProduct(val product:Produit?=null,val add:(Produit) -> Unit,val update
                 Toast.makeText(requireContext(), "empty", Toast.LENGTH_SHORT).show()
             }else{
                 if (product!=null){
-                    update(Produit(product.id ,binding.etProduit.text.toString(), isSelected = product.isSelected))
+                    update(Produit(product.id ,binding.etProduit.text.toString(), isSelected = product.isSelected,product.aisleNumber))
                     dismissNow()
                 }else{
-                    add(Produit(1,binding.etProduit.text.toString(), isSelected = false))
+                    add(Produit(1,binding.etProduit.text.toString(), isSelected = false,getAisleForProduct(binding.etProduit.text.toString())))
                     dismissNow()
                 }
 

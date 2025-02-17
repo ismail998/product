@@ -57,6 +57,12 @@ class HomeFragment : Fragment() {
             mAdapter.submitList(emptyList())
             mAdapter.notifyDataSetChanged()
         }
+        binding.btnSortByAlph.setOnClickListener {
+            viewModel.sortByAlphab()
+        }
+        binding.btnSortByNumber.setOnClickListener {
+            viewModel.sortByAsian()
+        }
     }
 
 

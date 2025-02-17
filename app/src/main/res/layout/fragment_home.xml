@@ -29,6 +29,28 @@
         android:layout_marginEnd="8dp"
         app:tint="@color/color_1" />
     <ImageView
+        android:id="@+id/btn_sort_by_number"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/_ic_sort_num"
+        app:layout_constraintTop_toTopOf="@id/tv_title"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
+        app:layout_constraintEnd_toStartOf="@id/btn_add"
+        android:layout_marginEnd="8dp"
+        app:tint="@color/color_1" />
+    <ImageView
+        android:id="@+id/btn_sort_by_alph"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/svgexport_16"
+        app:layout_constraintTop_toTopOf="@id/tv_title"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title"
+        app:layout_constraintEnd_toStartOf="@id/btn_sort_by_number"
+        android:layout_marginEnd="8dp"
+        app:tint="@color/color_1" />
+
+
+    <ImageView
         android:id="@+id/btn_delete"
         android:layout_width="30dp"
         android:layout_height="30dp"
